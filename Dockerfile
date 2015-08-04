@@ -12,4 +12,5 @@ EXPOSE 3000
 RUN useradd --create-home shout
 USER shout
 
+WORKDIR /go/src/git.xeserv.us/ponychat/shoutpage
 CMD shoutpage
