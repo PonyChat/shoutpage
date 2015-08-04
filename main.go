@@ -5,8 +5,9 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"strings"
 
-	"github.com/Xe/Tetra/atheme"
+	"git.xeserv.us/ponychat/shoutpage/atheme"
 	"github.com/codegangsta/negroni"
 	"github.com/yosssi/ace"
 )
@@ -54,8 +55,30 @@ func main() {
 			return
 		}
 
-		// Do checking here
+		info, err := a.NickServ.OwnInfo()
+		if err != nil {
+			handleError(rw, r, err)
+			return
+		}
 
+		groupsRaw, ok := info["groups"]
+		if !ok {
+			doTemplate("notinprogram", rw, r, username)
+			return
+		}
+
+		groups := strings.Split(groupsRaw, ", ")
+
+		for _, group := range groups {
+			if group == "!bncusers" {
+				goto ok
+			}
+		}
+
+		doTemplate("notinprogram", rw, r, username)
+		return
+
+	ok:
 		MakeUser(username, password)
 
 		doTemplate("success", rw, r, struct {

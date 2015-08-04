@@ -1,0 +1,12 @@
+= content title
+  title Whoops!
+
+= content main
+  h1 class="center red-text" There was an error!
+
+  .row
+    div class="offset-m3 m6 s12 col"
+      p {{.}}, you are not a part of the BNC program. Please contact an IRCop in #bnc to get enrolled.
+
+      center
+        a href="https://ponychat.net/webchat/?autojoin=bnc" class="btn btn-waves purple accent-4" Webchat
