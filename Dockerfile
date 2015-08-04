@@ -5,7 +5,7 @@ RUN go get github.com/yosssi/ace
 
 ADD . /go/src/git.xeserv.us/ponychat/shoutpage
 
-RUN go get github.com/ponychat/shoutpage
+RUN go get git.xeserv.us/ponychat/shoutpage
 
 EXPOSE 3000
 
