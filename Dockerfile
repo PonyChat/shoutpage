@@ -9,4 +9,7 @@ RUN go get git.xeserv.us/ponychat/shoutpage
 
 EXPOSE 3000
 
+RUN useradd --create-home shout
+USER shout
+
 CMD shoutpage
