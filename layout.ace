@@ -1,0 +1,21 @@
+= doctype html
+html lang=en
+  head
+    meta charset=utf-8
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+    = yield title
+      title PonyChat BNC signup form
+    link rel="stylesheet" href="/materialize/css/materialize.min.css"
+    script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"
+    script src="/materialize/js/materialize.min.js"
+
+  body class="purple lighten-5"
+    nav class="purple lighten-1 black-text" role="navigation"
+      div class="nav-wrapper container"
+        a id="logo-container" href="/" class="brand-logo" PonyChat BNC
+
+    .container
+      .section 
+        = yield main
+        = yield footer
+          p class="grey-text center" PonyChat Staff 2015

@@ -1,0 +1,10 @@
+= content title
+  title Success
+
+= content main
+  p class="center" You have signed up for the PonyChat BNC with the username {{.Username}}. Please click the below button to go to the BNC:
+
+  center
+    a class="btn btn-waves" href="{{.URL}}" Go to the BNC
+
+  p class="center" Your username and password are both case-sensitive.

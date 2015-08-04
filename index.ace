@@ -1,0 +1,46 @@
+= content main
+  center
+    h3 Sign up for the BNC
+
+    p Please fill out the form below for access to the BNC.
+
+  .row
+    div class="col s12 m6"
+      .row
+        div class="col s12 m8 offset-m2"
+          form action="/signup" method="POST"
+            div class="input-field col s12"
+              input id="email" name="username" type="text" class="active"
+              label for="email" data-error="wrong" data-success="right" Account Name
+
+            div class="input-field col s12"
+              input id="password" name="password" type="password" class="active"
+              label for="password" Password
+
+            input type="hidden" name="token" value="{{.Data}}"
+
+            button class="waves-effect waves-light btn purple accent-4" type="submit" Login
+
+      p class="center"
+        |
+          Don't have an account? Register on irc.ponychat.net.
+      center
+        a href="https://ponychat.net/webchat" class="btn center purple accent-4" Webchat
+
+    div class="col s12 m6"
+      div class="card purple darken-2"
+        div class="card-content white-text"
+          p Please use the same username and password that you use for NickServ. If you don't know which username to use, please check:
+
+          code /msg NickServ INFO
+
+          pre
+            |
+              Information on Foobang (account Foo):
+              Registered : Mar 27 21:57:58 2015 +0000 (18w 3d 4h ago)
+              Flags      : HideMail
+              Language   : default
+              Channels   : 0 founder, 0 other
+              *** End of Info ***
+
+          p In this case "Foo" would be the account name.
