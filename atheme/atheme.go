@@ -6,7 +6,7 @@ import (
 	"strings"
 	"time"
 
-	"git.xeserv.us/ponychat/shoutpage/atheme/xmlrpc"
+	"github.com/PonyChat/shoutpage/atheme/xmlrpc"
 )
 
 // Atheme is an Atheme context. This contains everything a client needs to access Atheme

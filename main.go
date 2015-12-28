@@ -7,7 +7,7 @@ import (
 	"os"
 	"strings"
 
-	"git.xeserv.us/ponychat/shoutpage/atheme"
+	"github.com/PonyChat/shoutpage/atheme"
 	"github.com/codegangsta/negroni"
 	"github.com/yosssi/ace"
 )
